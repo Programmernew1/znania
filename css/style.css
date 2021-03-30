@@ -1,0 +1,48 @@
+* {
+ box-sizing: border-box;
+}
+.container{
+    background-color: #424242;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.choices{
+    width: 176px;
+    
+}
+.choices__inner{
+border: 1px solid #CCB26E;
+border-radius: 10px;
+padding-top: 10px;
+padding-bottom: 10px;
+}
+
+.choices__item{
+font-size: 14px;
+color: #333333 ;
+}
+.choices__placeholder{
+    opacity: 1;
+}
+.choices__list--dropdown .choices__item--selectable.is-highlighted::after{
+display: none;
+}
+
+#choices--selectCustom-item-choice-5{
+    display: none;
+}
+
+
+.choices__inner{
+    padding-left: 15px;
+}
+.choices__input{
+    color: blue;
+}
+.choices__list{
+    color: crimson;
+}
+.choices__list--multiple{
+    color:cyan;
+}

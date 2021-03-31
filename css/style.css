@@ -46,3 +46,11 @@ display: none;
 .choices__list--multiple{
     color:cyan;
 }
+
+
+
+/* карта */
+[class*="ground-pane"]{
+    filter:grayscale(1);
+}
+/* --- карта ---  */

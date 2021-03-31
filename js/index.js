@@ -5,19 +5,57 @@ const element = document.querySelector('#selectCustom');
 
 
 
-  // Функция ymaps.ready() будет вызвана, когда
-    // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
-    ymaps.ready(init);
-    function init(){
-        // Создание карты.
-        var myMap = new ymaps.Map("map", {
-            // Координаты центра карты.
-            // Порядок по умолчанию: «широта, долгота».
-            // Чтобы не определять координаты центра карты вручную,
-            // воспользуйтесь инструментом Определение координат.
-            center: [55.76, 37.64],
-            // Уровень масштабирования. Допустимые значения:
-            // от 0 (весь мир) до 19.
-            zoom: 7
+  ymaps.ready(function () {
+    var myMap = new ymaps.Map('map', {
+            center: [48.872185, 2.354215],
+            zoom: 14
+        }, {
+            searchControlProvider: 'yandex#search'
+        }),
+
+        // Создаём макет содержимого.
+        MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+            '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+        ),
+
+        myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+            hintContent: '',
+            balloonContent: ''
+        }, {
+            // Опции.
+            // Необходимо указать данный тип макета.
+            iconLayout: 'default#image',
+            // Своё изображение иконки метки.
+            iconImageHref: 'img/Subtract@2x.png',
+            // Размеры метки.
+            iconImageSize: [28, 40],
+            // Смещение левого верхнего угла иконки относительно
+            // её "ножки" (точки привязки).
+            iconImageOffset: [-5, -38]
+        }),
+
+        myPlacemarkWithContent = new ymaps.Placemark([55.661574, 37.573856], {
+            hintContent: 'Собственный значок метки с контентом',
+            balloonContent: 'А эта — новогодняя',
+            iconContent: '12'
+        }, {
+            // Опции.
+            // Необходимо указать данный тип макета.
+            iconLayout: 'default#imageWithContent',
+            // Своё изображение иконки метки.
+            iconImageHref: 'images/ball.png',
+            // Размеры метки.
+            iconImageSize: [48, 48],
+            // Смещение левого верхнего угла иконки относительно
+            // её "ножки" (точки привязки).
+            iconImageOffset: [-24, -24],
+            // Смещение слоя с содержимым относительно слоя с картинкой.
+            iconContentOffset: [15, 15],
+            // Макет содержимого.
+            iconContentLayout: MyIconContentLayout
         });
-    }
+
+    myMap.geoObjects
+        .add(myPlacemark)
+        .add(myPlacemarkWithContent);
+});

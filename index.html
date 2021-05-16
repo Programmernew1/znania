@@ -5,20 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css"/>
     <link rel="stylesheet" href="chois/choices.min.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
 
-
 </head>
 <body>
-   
-    <div class="container">
-        <div class="category">
-           
-        </div>
-    </div>
-    <select name="" id="selectCustom"  class="select">
+    
+
+
+<div class="container">
+    <div class="radio-select">
+        <p class="p-radio-select">Категории : </p>
+        <input type="checkbox" class="custom-checkbox" id="i1" name="Dino" value="yes">
+        <label for="i1">Динозавры</label>  
+        <input type="checkbox" class="custom-checkbox" id="i2" name="Med" value="yes">
+        <label for="i2">Медведи</label> 
+        <input type="checkbox" class="custom-checkbox" id="i3" name="Kos" value="yes">
+        <label for="i3">Косули</label> 
+        <input type="checkbox" class="custom-checkbox" id="i4" name="Lis" value="yes">
+        <label for="i4">Лисы</label> 
+        <input type="checkbox" class="custom-checkbox" id="i5" name="Vol" value="yes">
+        <label for="i5">Волки</label> 
+        <input type="checkbox" class="custom-checkbox" id="i6" name="Ol-i-Lis" value="yes">
+        <label class="ol" for="i6">Олени и лисы</label> 
+     </div>
+    <div>
+        <select name="" id="selectCustom"  class="select">
             <option id="q" value="">Материал</option>
             <option value="Древесина">Древесина</option>
             <option value="Металл">Металл</option>
@@ -26,17 +42,47 @@
             <option value="Пластик">Пластик</option>
             <option value="Композитный">Композитный</option>
             <option value="Гипс">Гипс</option>
+        </select>
+
+    </div>
+    <div>
+        <div class="maps" id="map" style=" max-width: 460px; height: 460px">
+        </div>
+    </div>
+    <div class="scroll" >
+        <p data-simplebar class="p-scroll"> 
+            Сложно сказать, почему многие известные личности представлены в исключительно положительном свете. Лишь активно развивающиеся страны третьего мира будут объективно рассмотрены соответствующими инстанциями. Мы вынуждены отталкиваться от того, что высокотехнологичная концепция общественного уклада представляет собой интересный эксперимент проверки глубокомысленных рассуждений. Имеется спорная точка зрения, гласящая примерно следующее: непосредственные участники технического прогресса освещают чрезвычайно интересные особенности картины в целом, однако конкретные выводы, разумеется, обнародованы. Значимость этих проблем настолько очевидна, что социально-экономическое развитие, а также свежий взгляд на привычные вещи - безусловно открывает новые горизонты для первоочередных требований.
+        </p>
+    </div>
+    <div class="div-form">
+        <form class="form">
+            <p class="title-form">Как вас зовут?</p>
+            <input placeholder="Имя*" type="text" name="fio" data-validate-field="fio">
+            <p class="title-form">Укажите ваш телефон</p>
+            <input placeholder="Телефон*" type="email" name="email" data-validate-field="email">
+            <p class="title-form">Укажите ваш e-mail</p>
+            <input placeholder="e-mail*" type="tel" name="tel" data-validate-field="tel">
+            <button type="submit">Отправить</button>
+        </form>
+    </div>
+    <div class="tooltip">
+        <p class="tooltip-text">Следует отметить, что социально-экономическое развитие способствует повышению качества переосмысления внешнеэкономических политик.</p>
+       <span class="marker">i</span>
+        <div  class="podskaska">Глава 2, страница 176 <div id="triangle_down"></div></div>
         
-       
-    </select>
+    </div>
 
+   
+</div>
 
-
-    <div class="maps" id="map" style="width: 460px; height: 460px"></div>
-     
+  
+    
+    <script src="js/inputmask.min.js"></script>
     <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript">
     </script>
- <script src="chois/choices.min.js"></script>
- <script src="js/index.js"></script>   
+    <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+    <script src="chois/choices.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/valid.js"></script>   
 </body>
 </html>

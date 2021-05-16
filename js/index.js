@@ -59,3 +59,10 @@ const element = document.querySelector('#selectCustom');
         .add(myPlacemark)
         .add(myPlacemarkWithContent);
 });
+
+
+
+
+
+
+

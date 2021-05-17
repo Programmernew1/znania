@@ -195,13 +195,14 @@ display: none;
 
 /* forma */
 .div-form{
+    margin-bottom: 25px;
     display: flex;
     flex-direction: column;
     background-color: black;
     padding-left: 30px;
     padding-top: 38px;
     width: 440px;
-    height: 410px;
+    /* height: 410px; */
 }
 
 .div-form input{
@@ -213,6 +214,7 @@ display: none;
     border-radius: 10px;
 }
 .div-form button{
+    margin-bottom: 31px;
     margin-top: 31px;
     color: #fff;
     padding: 18.5px 53px;

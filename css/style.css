@@ -1,5 +1,7 @@
 * {
  box-sizing: border-box;
+ font-family: 'Open Sans', sans-serif;
+ 
 }
 .container{
     /* display: flex;
@@ -19,13 +21,14 @@
     margin: 0;
     font-weight: 600;
     font-size: 18px;
+    margin-bottom: 15px;
 }
 .radio-select{
     margin-bottom: 20px;
     border-radius: 10px;
-    padding-top: 21px;
-    padding-bottom: 29px;
-    padding-left: 30px;
+    padding-top: 24px;
+    padding-bottom: 30px;
+    padding-left: 32px;
     padding-right: 30px;
     background-color: #fff;
     font-size: 14px;
@@ -39,7 +42,16 @@
     position: absolute;
     z-index: -1;
     opacity: 0;
-}  /*прячем чекбокс по умолчанию*/
+} 
+.label{
+    margin-bottom: 13px;
+}
+.label:last-child{
+    margin-bottom: 0;
+}
+
+
+/*прячем чекбокс по умолчанию*/
 
 /* поддельный чекбокс */
 
@@ -48,12 +60,16 @@
     display: inline-flex;
     align-items: center;
     user-select: none;
+    min-width: 116px;
+}
+.custom-checkbox+label:first-child{
+    padding-top: 20px;
 }
 .custom-checkbox+label::before {
     content: '';
     display: inline-block;
-    width: 15px;
-    height: 15px;
+    width: 12px;
+    height: 12px;
     flex-shrink: 0;
     flex-grow: 0;
     border: 1px solid #999999;
@@ -100,7 +116,10 @@
 
 /* -- кастомная радиокнопка */
 
+/* select */
+
 .choices{
+  
     /* margin-right: 58px;
     margin-left: 92px; */
     width: 176px;
@@ -109,14 +128,26 @@
 .choices__inner{
 border: 1px solid #CCB26E;
 border-radius: 10px;
+padding-left: 10px;
+
+
+}
+.choices[data-type*=select-one] .choices__inner{
+    border: 1px solid #CCB26E;
+border-radius: 10px;
 padding-top: 10px;
-padding-bottom: 10px;
+
+}
+
+.choices__list--dropdown .is-open{
+    border:10px
 }
 
 .choices__item{
 font-size: 14px;
 color: #333333 ;
 }
+
 .choices__placeholder{
     opacity: 1;
 }
@@ -128,16 +159,44 @@ display: none;
     display: none;
 }
 
-
-.choices__inner{
-    padding-left: 15px;
+#choices--selectCustom-item-choice-1{
+    display: none;
 }
+
+
+.choices__list--dropdown .choices__item--selectable{
+    padding-right: 0;
+    padding-bottom: 20px;
+}
+.select{
+    position: relative;
+}
+
+.d{
+    position: absolute;
+    top: 0;
+}
+
+.choices[data-type*=select-one]:after{
+    display: none;
+}
+.choices[data-type*=select-one]:before{
+    content: url(/img/Rectangle-141.png);
+    position: absolute;
+    top: 28%;
+    right: 14px;
+}
+[data-type*=select-one]:hover::before{
+    /* background-color: red; */
+    transform: rotateX(180deg);
+    top: 37%;  
+}
+
+
 .choices__input{
     color: blue;
 }
-.choices__list{
-    color: crimson;
-}
+
 .choices__list--multiple{
     color:cyan;
 }
@@ -165,10 +224,11 @@ display: none;
     margin-top: 10%;
     width: 399px;
     background-color: white;
-    margin-bottom: 20%;
-    
+    margin-bottom: 21%;
+    line-height: 23.8px;
 }
 .p-scroll{
+    font-size: 14px;
     padding-top: 20px;
     padding-left: 30px;
     padding-right: 30px;
@@ -199,14 +259,14 @@ display: none;
     display: flex;
     flex-direction: column;
     background-color: black;
-    padding-left: 30px;
-    padding-top: 38px;
-    width: 440px;
+    padding-left: 20px;
+    padding-top: 23px;
+    width: 424px;
     /* height: 410px; */
 }
 
 .div-form input{
-    width: 360px;
+    width: 373px;
     height: 60px;
   
     background: #FFFFFF;
@@ -214,14 +274,17 @@ display: none;
     border-radius: 10px;
 }
 .div-form button{
-    margin-bottom: 31px;
+    margin-bottom: 39px;
     margin-top: 31px;
     color: #fff;
-    padding: 18.5px 53px;
+    padding: 16.5px 53px;
     border: 1px solid #FF5C00;
     border-radius: 10px;
     margin-right: 211px;
     background-color: #FF5C00;
+}
+.button-submit{
+font-size: 20px;
 }
 ::placeholder{
     padding-left: 10px;

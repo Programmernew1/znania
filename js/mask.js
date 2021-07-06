@@ -1,23 +1,30 @@
-var selector = document.querySelector("input[type='tel']");
-var im = new Imputmask("+7(999)-999-99-99");
-im.mask(selector);
-new Justvalidate('.form',{
+// inputMask
+let inputs = document.querySelectorAll('input[type="tel"]');
+let im = new Inputmask('+7 (999) 999-99-99');
+im.mask(inputs);
+
+
+
+new JustValidate('.form',{
     rules:{
         name:{
             required:true,
-            minlength:2,
-            maxLength:10
+            minLenght:2,
+            maxlenght:10
         },
         tel:{
-            required:true,
-            function:(name,value) =>{
-                const phone = selector.inputmask.unmaskedvalue()
-                return Number(phone) && phone.length === 10
-            }
+            required:true
         },
-        mail:{
+        email:{
             required:true,
-            email:true
-        },
+            email:true,
+            
+        }
     },
+    messages:{
+        name:"как вас зовут?",
+        tel:"Укажите ваш телефон",
+        email:"Укажите ваш email",
+        
+    }
 });

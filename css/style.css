@@ -186,10 +186,9 @@ display: none;
     top: 28%;
     right: 14px;
 }
-[data-type*=select-one]:hover::before{
-    /* background-color: red; */
+ .is-open::before{
     transform: rotateX(180deg);
-    top: 37%;  
+    top: 37% !important;
 }
 
 
@@ -240,7 +239,7 @@ display: none;
     background: #CCB26E;
     border-radius: 5px;
     width: 6px;
-    height: 70px;
+    /* height: 70px; */
 }
 /* --scroll -- */
 
@@ -255,6 +254,7 @@ display: none;
 
 /* forma */
 .div-form{
+    position: relative;
     margin-bottom: 25px;
     display: flex;
     flex-direction: column;
@@ -266,13 +266,31 @@ display: none;
 }
 
 .div-form input{
+    margin-bottom: 31px;
     width: 373px;
     height: 60px;
-  
+    color: #333333 !important;
     background: #FFFFFF;
-    border: 1px solid #FF5C00;
+    border: 1px solid #FF5C00 ;
     border-radius: 10px;
 }
+
+ 
+.label{
+    position: relative;
+}
+.js-validate-error-label{
+    position: absolute;
+    left: 16px;
+    bottom: 44px;
+    font-size: 12px;
+    color: #FF5C00 !important;
+}
+ .email{
+    color: red;
+    margin-bottom: 0 !important;
+}
+
 .div-form button{
     margin-bottom: 39px;
     margin-top: 31px;
@@ -290,7 +308,7 @@ font-size: 20px;
     padding-left: 10px;
 }
 .title-form{
-    
+   
     margin: 0;
     margin-bottom: 4px;
     margin-left: 15px;
@@ -300,6 +318,10 @@ font-size: 20px;
 .title-form:not(:first-child){
     margin-top: 14px;
 }
+
+
+
+
 
 /* -- forma */
 

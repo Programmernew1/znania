@@ -56,17 +56,38 @@
             Сложно сказать, почему многие известные личности представлены в исключительно положительном свете. Лишь активно развивающиеся страны третьего мира будут объективно рассмотрены соответствующими инстанциями. Мы вынуждены отталкиваться от того, что высокотехнологичная концепция общественного уклада представляет собой интересный эксперимент проверки глубокомысленных рассуждений. Имеется спорная точка зрения, гласящая примерно следующее: непосредственные участники технического прогресса освещают чрезвычайно интересные особенности картины в целом, однако конкретные выводы, разумеется, обнародованы. Значимость этих проблем настолько очевидна, что социально-экономическое развитие, а также свежий взгляд на привычные вещи - безусловно открывает новые горизонты для первоочередных требований.
         </p>
     </div>
+
     <div class="div-form">
+        <form class="form" action="">
+
+            <label class="label" for="">
+                <input class="name" placeholder="Имя" type="text"data-validate-field = "name" >
+            </label>
+
+            <label class="label" for="">
+                <input class="tel" placeholder="тел" type="tel" data-validate-field = "tel" >
+            </label>
+
+           <label class="label" for="">
+                 <input class="email" placeholder="email" type="email" data-validate-field = "email">
+            </label>
+          
+            
+            <button class="button" type="submit">Заказать</button>
+        </form>
+    </div>
+    
+    <!-- <div class="div-form">
         <form class="form">
             <p class="title-form">Как вас зовут?</p>
-            <input placeholder="Имя*" type="text" name="fio" data-validate-field="fio">
+            <input placeholder="Имя*" type="text" name="fio" data-validate-field="name">
             <p class="title-form">Укажите ваш телефон</p>
             <input placeholder="Телефон*" type="tel" name="tel" data-validate-field="tel">
             <p class="title-form">Укажите ваш e-mail</p>
             <input placeholder="E-mail*" type="email" name="e-mail" data-validate-field="e-mail">
             <button class="button-submit" type="submit">Заказать</button>
         </form>
-    </div>
+    </div> -->
     <div class="tooltip">
         <p class="tooltip-text">Следует отметить, что социально-экономическое развитие способствует повышению качества переосмысления внешнеэкономических политик.</p>
        <span class="marker">i</span>
@@ -74,10 +95,6 @@
        
     </div>
 
-   
-</div>
-
-  
     
     <script src="js/inputmask.min.js"></script>
     <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript">
@@ -85,8 +102,8 @@
     <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
     <script src="chois/choices.min.js"></script>
     <script src="js/index.js"></script>
-    <script src="js/just-validate.min.js"></script>
-    <script src="js/valid.js"></script>   
+    <script src="js/just-validate.min.js"></script> 
+    <script src="js/mask.js"></script>
     
 </body>
 </html>

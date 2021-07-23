@@ -119,7 +119,8 @@
 /* select */
 
 .choices{
-  
+    position: relative;
+    z-index: 2;
     /* margin-right: 58px;
     margin-left: 92px; */
     width: 176px;
@@ -142,7 +143,11 @@ padding-top: 10px;
 .choices__list--dropdown .is-open{
     border:10px
 }
-
+.choices__list--dropdown{
+    top: 16px;
+    padding-top: 30px;
+    z-index: -1; 
+}
 .choices__item{
 font-size: 14px;
 color: #333333 ;
@@ -255,7 +260,7 @@ display: none;
 /* forma */
 .div-form{
     position: relative;
-    margin-bottom: 25px;
+    margin-bottom: 5%;
     display: flex;
     flex-direction: column;
     background-color: black;
@@ -327,30 +332,32 @@ font-size: 20px;
 
 /* tooltup */
 .tooltip{
-    padding-left: 29px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-right: 78px;
     max-width: 375px;
     background-color: #fff;
     position: relative;
+    margin: 0;
 }
 .tooltip-text{
+    
     margin: 0;
-line-height: 170%;
+    padding-top: 20px;
+    padding-left: 28px;;
+    padding-bottom: 19px;
+    padding-right: 102px;
+line-height: 176%;
 font-weight: 400;
 font-family: 'Open Sans', sans-serif;
 font-size: 14px;
 
 }
 .marker{
+    width: 18px;
     position: absolute;
-    top: 115px;
-    right: 100px;
+    top: 118px;
+    right: 102px;
     display: inline-block;
     color:#fff;
-    padding-left: 8px;
-    padding-right: 8px;
+    
     cursor: pointer;
    
     
@@ -395,3 +402,20 @@ font-size: 14px;
     border-right: 10px solid transparent;
 }
 
+.tippy-box[data-theme~='gray'] {
+    background-color: #666666;
+    color: white;
+   font-size: 12px;
+    border-radius:0;
+   width: 163px;
+   padding-top: 2px;
+   padding-bottom: 2px;
+   text-align: center;
+   
+  }
+  .tippy-box[data-theme~='gray'][data-placement^='top'] > .tippy-arrow::before {
+    border-top-color:#666666 ;
+    width: 1px;
+    
+  }
+  
